@@ -1,0 +1,4 @@
+
+class Inherited(list):
+    pass
+
