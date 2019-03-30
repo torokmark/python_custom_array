@@ -20,7 +20,9 @@ expect(lambda: next(arr)).to(raise_error(TypeError))
 
 expect(lambda: len(arr)).not_to(raise_error(TypeError))
 expect(lambda: arr[2]).not_to(raise_error(TypeError))
+expect(arr[1]).to(equal(2))
 expect(lambda: arr[:]).not_to(raise_error(TypeError))
+expect(arr[0:2]).to(equal([1, 2]))
 expect(lambda: arr.extend([1, 2])).to(raise_error(AttributeError))
 expect(lambda: arr.__array).to(raise_error(AttributeError))
 
